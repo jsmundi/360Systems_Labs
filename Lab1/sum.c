@@ -11,6 +11,9 @@ int main ()
 	result = sum(n);
 	printf("%i\n", result);
 	
+	(n % 4 == 0) ? printf("Is Even\n") : printf("Is Odd\n"); 
+	
+/*
 	if( (result % 2)  == 0)
 	{
 	printf("Is Even\n");
@@ -18,7 +21,7 @@ int main ()
 	else
 	{
 	printf("Is Odd\n"); 
-	} 
+	} */
 }
 
 int sum(int n)
