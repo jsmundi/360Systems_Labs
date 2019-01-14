@@ -1,7 +1,8 @@
 #include <stdio.h>
 
+
 void removeSpace(char myStr[]);
-void slice_str(const char * str, char * buffer, size_t start, size_t end);
+
 int main ()
 {
 	char myString[] = "  system  programming";
@@ -10,6 +11,9 @@ int main ()
 	return 0;
 }
 
+/*
+	Remove only leading spaces from a string.
+*/
 void removeSpace(char myStr[])
 {
 	int strLen = strlen(myStr);
@@ -17,25 +21,24 @@ void removeSpace(char myStr[])
 	for(int i = 0; i<=strLen; i++)
 	{
 
+		//Check for spaces in front of string
 		if((myStr[i] != ' ') && (i > 0))
 		{
 			 start = i;
 			 break;
 		}
 	}
-	
-	//printf("%i", start);
-	
+		
 	int x, y = 0;
 	char newStr [strLen-start];
+
+	//Copy the string to a new array
 	for(x = start; x <= strLen; x++)
 	{
 		newStr[y] = myStr[x];
 		y++;
 	}
-
 	printf("%s\n", newStr);
-
 }
 
 
