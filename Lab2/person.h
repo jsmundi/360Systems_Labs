@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 /* Structure to hold the family tree */
 
@@ -14,7 +15,7 @@ typedef struct _person
     struct _person *spouse;
 } Person;
 
-void addPerson(char *newName, Person *f, Person *m);
+Person* addPerson(char *newName, Person *f, Person *m);
 void deletePerson(Person *p);
 void marryPerson(Person *p, Person *sp);
 void divorcePerson(Person *wife, Person *husband);

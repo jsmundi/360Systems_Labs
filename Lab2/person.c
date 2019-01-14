@@ -1,6 +1,6 @@
 #include "person.h"
 
-void addPerson(char *newName, Person *f, Person *m)
+Person* addPerson(char *newName, Person *f, Person *m)
 {
 
     Person *newP = (Person *)malloc(sizeof(Person));
@@ -22,6 +22,10 @@ void addPerson(char *newName, Person *f, Person *m)
     {
         newP->mother = m;
     }
+    
+    printf("Successfully added %s \n", newP->name);
+
+    return newP;
 }
 void deletePerson(Person *p)
 {
@@ -31,15 +35,23 @@ void marryPerson(Person *p, Person *sp)
 {
     p->spouse = sp;
     sp->spouse = p; 
+
+    printf("Married %s & %s \n", p->name, sp->name); 
 }
 void divorcePerson(Person *wife, Person *husband)
 {
     wife->spouse = NULL;
     husband->spouse = NULL; 
+    printf("Divorced %s & %s \n", wife->name, husband->name); 
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
-    /* code */
+    Person* J = addPerson("John", NULL, NULL);
+    Person* M = addPerson("Marry", NULL, NULL);
+    marryPerson(J, M);
+    divorcePerson(J,M);
+    deletePerson(J);
+    deletePerson(M);
     return 0;
 }
