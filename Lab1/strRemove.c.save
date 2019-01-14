@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+int main()
+{
+	str = "    a ";aa	return 0;
+}
+
+void removeSpace (int arr[] )
+{
+	
+}
