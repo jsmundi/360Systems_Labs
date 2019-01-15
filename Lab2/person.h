@@ -6,7 +6,6 @@
 #include <stdlib.h>
 
 /* Structure to hold the family tree */
-
 typedef struct _person
 {
     char *name;
