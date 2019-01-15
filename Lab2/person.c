@@ -178,6 +178,7 @@ int main()
 
     //Free the head for linked list
     free(head);
+    free(head2);
 
     //Delete all the persons
     deletePerson(J);

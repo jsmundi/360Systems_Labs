@@ -26,7 +26,7 @@ ${EXEC}:${OBJS}
 	${CPP} ${FLAGS} -o ${EXEC} ${OBJS}
 
 val: 
-	valgrind --leak-check=yes {EXEC}
+	valgrind --leak-check=yes ${EXEC}
 
 .c.o:
 	${CPP} ${FLAGS} -c $<
