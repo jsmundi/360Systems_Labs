@@ -65,7 +65,7 @@ void push(list **head, Person *p)
     newnode->personPtr = p;
     newnode->next = *head;
     *head = newnode; // *head stores the newnode in the head
-    free(newnode);
+    
 }
 
 /* Prints the linked list given header pointer */
@@ -87,18 +87,17 @@ void print_list(list *head)
     in loops through the linked list destroying each
     node individually to insure no memory leaks.
 */
-void destroyLinkedList(list **head_ref)
+void destroyLinkedList(list *head_ref)
 {
 
-    struct list *current = *head_ref;
-    struct list *next;
-    while (current != NULL)
-    {
-        next = current->next;
-        free(current);
-        current = next;
+list * curr = head_ref;
+    list * next = NULL; 
+    while (curr != 0) {
+        next = curr->next;
+        free(curr);
+        curr = next;        
     }
-    *head_ref = NULL;
+
 }
 
 /* Compare the list structure using string compare for two different 
@@ -171,15 +170,12 @@ int main()
 
     listCompare(&head, &head2);
 
-    print_list(head);
+//    print_list(head);
 
     //Free the linked list
-    destroyLinkedList(&head);
-    destroyLinkedList(&head2);
+    destroyLinkedList(head);
+    destroyLinkedList(head2);
 
-    //Free the head for linked list
-    //free(head);
-    //free(head2);
 
     //Delete all the persons
     deletePerson(J);

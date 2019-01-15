@@ -1,4 +1,2 @@
 *.out
-Lab2/outP
-Lab2/outP.dSYM/Contents/Info.plist
-Lab2/outP.dSYM/Contents/Resources/DWARF/outP
+*.o
