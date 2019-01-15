@@ -174,6 +174,7 @@ int main()
 
     //Free the linked list
     destroyLinkedList(&head);
+    destroyLinkedList(&head2);
 
     //Free the head for linked list
     free(head);
