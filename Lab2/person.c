@@ -170,8 +170,6 @@ int main()
 
     listCompare(&head, &head2);
 
-//    print_list(head);
-
     //Free the linked list
     destroyLinkedList(head);
     destroyLinkedList(head2);
