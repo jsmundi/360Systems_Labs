@@ -18,11 +18,11 @@ The program requires GCC to run.
 The program can be run using the Makefile
 Commands:
 
-Compile the program.
+- Compile the program.
 ```$ Make```
-Run the program
+- Run the program
 ```$ Make run```
-Clean the program
+- Clean the program
 ```$ Make clean```
-Debug using Valgrind
+- Debug using Valgrind
 ```$ Make val```
