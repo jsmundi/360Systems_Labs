@@ -14,7 +14,7 @@ typedef struct _person
     struct _person *spouse;
 } Person;
 
-Person* addPerson(char *newName, Person *f, Person *m);
+Person *addPerson(char *newName, Person *f, Person *m);
 void deletePerson(Person *p);
 void marryPerson(Person *p, Person *sp);
 void divorcePerson(Person *wife, Person *husband);
